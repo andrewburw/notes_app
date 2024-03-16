@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:privatenotes/constants/constants.dart';
 
 class RegiseterView extends StatefulWidget {
   const RegiseterView({super.key});
@@ -129,7 +130,7 @@ class _RegiseterViewState extends State<RegiseterView> {
               TextButton(
                   onPressed: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                        '/login/', (route) => false);
+                        loginRoute, (route) => false);
                   },
                   child: const Text(
                     'Already Registred ? Login Here',
